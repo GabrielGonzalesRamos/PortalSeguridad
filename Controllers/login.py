@@ -33,7 +33,7 @@ class LoginController(Resource):
             return {
                 'success': False,
                 'content': None,
-                'message': "La contraseña ingresada no coincide con la del usuario. Por favor, verifica la contraseña e inténtalo nuevamente. Si olvidaste tu contraseña, puedes restablecerla siguiendo las instrucciones correspondientes."
+                'message': "La contraseña ingresada no coincide con la del usuario. Por favor, verificar la contraseña e inténtalo nuevamente."
                 }, 400
                 
 

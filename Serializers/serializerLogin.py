@@ -5,13 +5,13 @@ serializerLogin.add_argument(
     'correo',
     type=str,
     required=True,
-    help='Correo requerido',
+    help='Por favor, asegúrate de completar el campo del correo para continuar',
     location='json'
 )
 serializerLogin.add_argument(
     'password',
     type=str,
     required=True,
-    help='Contraseña requerida',
+    help='Por favor, asegúrate de ingresar tu contraseña para continuar.',
     location='json'
 )
