@@ -1,7 +1,6 @@
 from re import search
 from flask_restful import Resource
 from Models.usuario import UsuarioModel
-from Config.conexion_bd import base_de_datos
 from Serializers.serializerUsuarios import serializerUsuarios
 
 class UsuariosController(Resource):
