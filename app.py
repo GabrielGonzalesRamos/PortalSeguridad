@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
-from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
 from Config.conexion_bd import base_de_datos
+from Config.jwt_customized import jwt
 from Controllers.usuarios import UsuariosController
 from Controllers.login import LoginController
 from Controllers.alumnos import AlumnosController
@@ -20,8 +20,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = environ.get('SECRET_KEY')
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(seconds=1)
 
-jwt = JWTManager(app)
-
+jwt.init_app(app)
 base_de_datos.init_app(app)
 base_de_datos.create_all(app=app)
 
